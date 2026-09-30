@@ -160,6 +160,29 @@
     color: #f0abfc; border-color: #f0abfc;
   }
 
+  /* Кнопка ИГРЫ */
+  .games-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #6d28d9, #a855f7);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    white-space: nowrap;
+    margin-left: auto;
+    order: 3;
+  }
+  .games-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.9);
+  }
+
   .dev-banner {
     background: linear-gradient(90deg, rgba(234, 179, 8, 0.15), rgba(168, 85, 247, 0.1));
     border-bottom: 1px solid rgba(234, 179, 8, 0.2);
@@ -515,6 +538,30 @@
     .device-screen h1 { font-size: 38px; }
     .device-choice { padding: 28px 32px; min-width: 140px; }
     .device-choice .icon { font-size: 42px; }
+    .games-btn {
+      font-size: 12px;
+      padding: 8px 14px;
+      margin-left: 0;
+      align-self: center;
+    }
+    /* Мобильные правки для списков */
+    .admin-list li {
+      display: block !important;
+      padding-left: 0 !important;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.6;
+    }
+    .admin-list li::before {
+      margin-right: 6px;
+    }
+    .admin-list ul { padding-left: 0; }
+    .panel, .admin-list, .admin-list li, .admin-list ul,
+    .card, .cat-card, .term {
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
   }
 </style>
 </head>
@@ -552,6 +599,7 @@
 
   <header>
     <div class="logo">🐱 Кошачьи сны</div>
+    <a href="games.html" class="games-btn">🎮 Игры</a>
     <nav>
       <a href="#about">О боте</a>
       <a href="#categories">Категории</a>
@@ -621,9 +669,7 @@
     <div class="panel">
       <p style="color:#f0abfc;font-weight:700;">🐾 1. Запустите бота</p>
       <p>Для начала нажмите «Запустить» или отправьте команду <b>/start</b>.</p>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;">💬 2. Напишите нужную фразу</p>
       <p>Чтобы начать общение, отправьте одну из фраз:</p>
       <ul>
@@ -632,22 +678,16 @@
         <li>«Можно админа? Общение»</li>
       </ul>
       <p>После этого дождитесь приветственного сообщения от бота. 🐱</p>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;">🏷️ 3. Не забудьте про тег!</p>
       <p>После того как вам придёт приветствие, в каждом вашем сообщении обязательно должен быть указан тег, который написан в приветствии.</p>
       <p>Например, если в приветствии указан тег <span class="highlight">#сигарета</span>, сообщение нужно написать так:</p>
       <p style="text-align:center;font-weight:600;color:#e9d5ff;">«Привет #сигарета»</p>
       <p>Тег должен присутствовать в каждом сообщении. 🐾</p>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;">📢 4. Подпишитесь на наш Telegram-канал</p>
       <p>Обязательно подпишитесь на наш ТГК, чтобы не пропускать важные новости, обновления и объявления! 🐱💗</p>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="text-align:center;color:#f0abfc;">🐾 Не забывайте: запустите бота → напишите нужную фразу → получите приветствие → используйте указанный тег в каждом сообщении → подпишитесь на наш ТГК.</p>
       <p style="text-align:center;color:#f0abfc;font-weight:700;">Мяу! Желаем приятного общения! 🐱💬</p>
     </div>
@@ -697,14 +737,10 @@
         <li><b>🌐 Проблемы сайта</b> — если сайт работает неправильно или вы столкнулись с ошибкой.</li>
         <li><b>🫶 Союз</b> — если хотите предложить союз или обсудить вопросы, связанные с ним.</li>
       </ul>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;">🐾 По поводу ПП</p>
       <p>Если вас интересует покупка ПП, напишите в техподдержку. ВЛД поможет обсудить условия и связаться с подходящим ботом для размещения рекламы. 💗</p>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="text-align:center;color:#94a3b8;font-style:italic;">🔧 Техподдержка пока настраивается — скоро появится ссылка.</p>
     </div>
   </section>
@@ -739,7 +775,6 @@
     <h2 class="section-title">Наша администрация</h2>
     <p class="section-sub">Вот кто заботится о «Кошачьих снах» и делает их уютными.</p>
     <div class="panel">
-
       <p style="color:#f0abfc;font-weight:700;text-align:center;margin-bottom:20px;">Старшие котята</p>
       <div class="admin-grid">
         <div class="admin-item"><span class="role">Владелец</span><span class="tag">#сигарета</span></div>
@@ -750,35 +785,27 @@
         <div class="admin-item"><span class="role">СтАдмин</span><span class="tag" style="color:#94a3b8;">нету</span></div>
         <div class="admin-item"><span class="role">МлАдмин</span><span class="tag" style="color:#94a3b8;">нету</span></div>
       </div>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;text-align:center;margin-bottom:20px;">Котки (по категориям)</p>
       <div class="admin-grid">
         <div class="admin-item"><span class="role">Универсал</span><span class="tag">#сигарета</span></div>
         <div class="admin-item"><span class="role">Универсал</span><span class="tag">#ласка</span></div>
         <div class="admin-item"><span class="role">Универсал</span><span class="tag">#лирика</span></div>
       </div>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;text-align:center;margin-bottom:20px;">Коты</p>
       <div class="admin-grid">
         <div class="admin-item"><span class="role">Общение</span><span class="tag">#немец</span></div>
         <div class="admin-item"><span class="role">Универсал</span><span class="tag">#директор</span></div>
       </div>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="color:#f0abfc;font-weight:700;text-align:center;margin-bottom:20px;">🚫 Свободные слоты</p>
       <div class="admin-grid">
         <div class="admin-item"><span class="role">Поддержка</span><span class="tag" style="color:#94a3b8;">нету</span></div>
         <div class="admin-item"><span class="role">Куратор</span><span class="tag" style="color:#94a3b8;">нету</span></div>
         <div class="admin-item"><span class="role">Монтажёр</span><span class="tag" style="color:#94a3b8;">нету</span></div>
       </div>
-
       <div class="divider">─────── ୨୧ ───────</div>
-
       <p style="text-align:center;color:#94a3b8;margin-bottom:24px;">Если хотите попасть в нашу замечательную команду — напишите в анкетницу.</p>
       <p style="text-align:center;"><a href="https://t.me/catdreams_anketa_bot" class="btn btn-sm" target="_blank">📝 Заполнить анкету</a></p>
     </div>
@@ -814,7 +841,6 @@
     <div class="admin-block">
       <h2>Работа админом</h2>
       <p>Хочешь стать частью команды «Кошачьих снов»? Мы ищем добрых, терпеливых и ответственных людей, которые готовы общаться и поддерживать других.</p>
-
       <div class="admin-lists" style="margin-bottom:40px;">
         <div class="admin-list">
           <h3>📋 Условия для вступления</h3>
@@ -839,7 +865,6 @@
           </ul>
         </div>
       </div>
-
       <a href="https://t.me/catdreams_anketa_bot" class="btn" target="_blank">📝 Заполнить анкету</a>
     </div>
   </section>
@@ -847,7 +872,6 @@
   <section id="admin-rules" class="reveal">
     <h2 class="section-title">Правила администрации</h2>
     <p class="section-sub">Каждый админ обязан ознакомиться с этими правилами и соблюдать их. Незнание правил не освобождает от ответственности.</p>
-
     <div class="accordion">
       <div class="acc-item">
         <div class="acc-header"><span>🖤 1. Общие положения</span><span class="arrow">▼</span></div>
@@ -859,7 +883,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>💬 2. Общение с ПЗ</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -871,7 +894,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>🔒 3. Конфиденциальность</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -883,7 +905,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>💕 4. Личные отношения</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -895,7 +916,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>⚙️ 5. Работа администратора</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -908,7 +928,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>🚫 6. Запрещено</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -922,7 +941,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>🤝 7. Внутри администрации</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -934,7 +952,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>🌙 8. Отсутствие и рест</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -945,7 +962,6 @@
           </ul>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>⚠️ 9. Нарушения</span><span class="arrow">▼</span></div>
         <div class="acc-body">
@@ -960,7 +976,6 @@
           <p>Тяжёлые нарушения могут рассматриваться отдельно без обязательного предварительного предупреждения.</p>
         </div>
       </div>
-
       <div class="acc-item">
         <div class="acc-header"><span>💜 10. Главное</span><span class="arrow">▼</span></div>
         <div class="acc-body">
